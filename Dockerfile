@@ -3,8 +3,8 @@ WORKDIR /src
 
 COPY . .
 
-RUN dotnet restore ./backend/QuickBookGeorgia.API.csproj
-RUN dotnet publish ./backend/QuickBookGeorgia.API.csproj -c Release -o /app/out
+RUN dotnet restore ./QuickBookGeorgia.API.csproj
+RUN dotnet publish ./QuickBookGeorgia.API.csproj -c Release -o /app/out
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
